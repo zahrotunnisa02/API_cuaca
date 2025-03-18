@@ -1,0 +1,73 @@
+body {
+    background-color: #f0f8ff;
+    font-family: Arial, sans-serif;
+}
+
+h2 {
+    color: #007bff;
+}
+
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+    background: white;
+}
+
+input[type="text"] {
+    border-radius: 5px;
+    padding: 10px;
+    width: 80%;
+}
+
+button {
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.time-display {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.forecast-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    background: #333;
+    padding: 15px;
+    border-radius: 10px;
+    color: white;
+}
+
+.forecast-card {
+    background: #444;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 18%;
+    color: white;
+}
+
+.forecast-card img {
+    width: 50px;
+    height: 50px;
+}
+
+.gradient-custom {
+    background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 236, 210, 1));
+    padding: 20px;
+    border-radius: 10px;
+}
