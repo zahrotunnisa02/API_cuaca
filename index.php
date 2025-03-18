@@ -1,16 +1,18 @@
 <?php
-if (isset($_GET['city'])) {
+if (isset($_GET['city'])) 
+    {
     $city = urlencode($_GET['city']);
     $apiKey = '84b34d10eaef926c3467cbf44f71045b'; // Ganti dengan API Key dari OpenWeather
+    // permintaan data cuaca hari ini
     $url = "https://api.openweathermap.org/data/2.5/weather?q=$city&appid=$apiKey&units=metric";
     
     $response = file_get_contents($url);
     $weatherData = json_decode($response, true);
-
+    // permintaan data prakiraan cuaca 5 hari kedepan
     $forecastUrl = "https://api.openweathermap.org/data/2.5/forecast?q=$city&appid=$apiKey&units=metric";
         $forecastResponse = file_get_contents($forecastUrl);
         $forecastData = json_decode($forecastResponse, true);
-}
+    }
 ?>
 <!DOCTYPE html>
 <html lang="id">
@@ -34,7 +36,7 @@ if (isset($_GET['city'])) {
         <?php if (isset($weatherData) && $weatherData['cod'] == 200): ?>
             <?php
                 $timestamp = $weatherData['dt'];
-                $tanggalCuaca = date('l, d F Y H:i', $timestamp); // waktu prediksi
+                $tanggalCuaca = date('l, d F Y H:i', $timestamp); // waktu prediksi yang ditampilkan 
             ?>
             <div class="card mx-auto" style="width: 18rem;">
                 <div class="card-body">
